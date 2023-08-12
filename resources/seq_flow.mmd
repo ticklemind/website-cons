@@ -1,0 +1,43 @@
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Django
+    participant Database
+    
+    User->>Browser: Access website
+    Browser->>Django: Send HTTP request
+    Django->>Browser: Return HTML response
+    Browser->>User: Display website
+    
+    User->>Browser: Navigate to contact page
+    Browser->>Django: Send HTTP request
+    Django->>Browser: Return HTML response
+    Browser->>User: Display contact page
+    
+    User->>Browser: Fill contact form
+    Browser->>Django: Send HTTP request with form data
+    Django->>Database: Save contact form data
+    Database-->>Django: Return success response
+    Django->>Browser: Return success response
+    
+    User->>Browser: Navigate to testimonials page
+    Browser->>Django: Send HTTP request
+    Django->>Browser: Return HTML response with testimonials
+    Browser->>User: Display testimonials
+    
+    User->>Browser: Fill testimonial form
+    Browser->>Django: Send HTTP request with form data
+    Django->>Database: Save testimonial form data
+    Database-->>Django: Return success response
+    Django->>Browser: Return success response
+    
+    User->>Browser: Navigate to appointment page
+    Browser->>Django: Send HTTP request
+    Django->>Browser: Return HTML response
+    Browser->>User: Display appointment page
+    
+    User->>Browser: Fill appointment form
+    Browser->>Django: Send HTTP request with form data
+    Django->>Database: Save appointment form data
+    Database-->>Django: Return success response
+    Django->>Browser: Return success response

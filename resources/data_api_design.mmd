@@ -1,0 +1,41 @@
+classDiagram
+    class TechConsultancy{
+        +str name
+        +str description
+        +str address
+        +str phone_number
+        +str email
+        +str website
+        +str expertise
+        +str experience
+    }
+    
+    class Testimonial{
+        +str content
+        +str author
+        +datetime date
+    }
+    
+    class Appointment{
+        +str name
+        +str email
+        +str phone_number
+        +datetime date
+        +str message
+    }
+    
+    class TechConsultancyForm{
+        +str name
+        +str email
+        +str message
+    }
+    
+    class TestimonialForm{
+        +str content
+        +str author
+    }
+    
+    TechConsultancy "1" -- "n" Testimonial: has
+    TechConsultancyForm "1" -- "1" TechConsultancy: belongs to
+    TestimonialForm "1" -- "1" Testimonial: belongs to
+    Appointment "1" -- "1" TechConsultancy: belongs to

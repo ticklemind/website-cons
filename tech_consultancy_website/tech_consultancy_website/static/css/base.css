@@ -1,0 +1,242 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    flex-shrink: 0;
+}
+
+.main {
+    flex: 1;
+}
+
+/* --- NAVBAR STYLES --- */
+header {
+    background-color: #2d1b3d; /* Dark purple */
+    color: #eaeaea; /* Light gray for readable contrast */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); /* Adding a subtle shadow for depth */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keeping the navbar on top of other elements */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;  /* White for brand name */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #eaeaea;  /* Light gray for hover */
+}
+
+.navbar-menu {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-item {
+    margin: 0 15px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: #eaeaea; /* Light gray for readable contrast */
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-link:hover {
+    background-color: #4a306d;  /* Slightly lighter purple for hover */
+    color: #fff;  /* White for hover effect */
+}
+
+footer {
+    background-color: #4a2d7c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.hero {
+    background-color: #e9e9e9;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about, .services {
+    padding: 20px;
+    text-align: center;
+}
+
+.services ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding-left: 0;
+}
+
+.services li {
+    flex: 1;
+    margin: 10px;
+}
+
+.services img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* --- FOOTER STYLES --- */
+footer {
+    background-color: #2d1b3d; /* Dark purple */
+    color: #eaeaea;  /* Light gray for readable contrast */
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+.footer-section {
+    padding: 20px;
+    margin: 0 auto;
+    width: 80%; /* you can adjust this as per your design */
+    max-width: 1200px; /* setting a max width to not stretch on super large screens */
+    display: inline-block;
+    vertical-align: top;
+    width: 24%;  /* Approx 1/4 width each, can adjust if necessary */
+    box-sizing: border-box;
+}
+
+.footer-section h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #fff;  /* White for heading contrast */
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #eaeaea;  /* Light gray for readable contrast */
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #fff; /* White for hover effect */
+}
+
+/* Social Icons */
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: #4a306d; /* Slightly lighter purple for icon background */
+    border-radius: 50%;  /* Makes it a circle, adjust if your icons are not perfectly square */
+}
+
+.social-icons li a img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Newsletter Form */
+.footer-section form {
+    display: flex;
+}
+
+.footer-section form input,
+.footer-section form button {
+    padding: 10px;
+    border: none;
+    margin-right: 10px;
+}
+
+.footer-section form button {
+    background-color: #4a306d; /* Slightly lighter purple for button */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-section form button:hover {
+    background-color: #693e8d; /* Even lighter purple for hover effect */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    border-top: 1px solid #4a306d;  /* Slightly lighter purple for border */
+    padding-top: 20px;
+}
+
+/* For smaller devices - responsive */
+@media (max-width: 800px) {
+    .footer-section {
+        width: 48%;  /* 2 columns */
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-section {
+        width: 100%; /* 1 column */
+        padding: 10px 0;
+    }
+}
+
+/* For smaller devices - responsive */
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    
+    .navbar-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar-item {
+        margin: 10px 0;
+    }
+}

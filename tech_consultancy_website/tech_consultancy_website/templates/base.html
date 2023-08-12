@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TickleMinds</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="/"><img src="{% static 'images/logo.png' %}" alt="TickleMinds Logo">TickleMinds</a>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/contact">Contact</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/testimonials">Testimonials</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/appointment">Appointment</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="/blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/testimonials">Testimonials</a></li>
+                <!-- Add other links as needed -->
+            </ul>
+        </div>
+    
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>Email: ashish@tickleminds.com</p>
+            <p>Phone: +91 7568992589</p>
+        </div>
+    
+        <div class="footer-section">
+            <h4>Stay Connected</h4>
+            <ul class="social-icons">
+                <li><a href="#"><img src="{% static 'img/facebook-icon.png' %}" alt="Facebook"></a></li>
+                <!-- Add other icons as needed -->
+            </ul>
+        </div>
+    
+        <div class="footer-section">
+            <h4>Newsletter</h4>
+            <form>
+                <input type="email" placeholder="Your Email Address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2023 Tickleminds. All rights reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+
+</html>

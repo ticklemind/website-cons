@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="{% static 'images/hero-image.jpg' %}" alt="Hero Image">
+        <h1>Welcome to TickleMinds</h1>
+        <p>We're here to guide and support your tech journey. Dive deep into our services, catch up on our latest blog posts, and discover why TickleMinds is the preferred choice for tech solutions.</p>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about">
+        <h2>About TickleMinds</h2>
+        <p>Founded in 2015, TickleMinds has grown from a small tech startup to a renowned name in the IT consultancy domain. We combine innovative ideas with deep business knowledge and global technology teams to deliver the best solutions for our clients. Our dedicated team works around the clock to understand your tech needs, propose solutions, and help you navigate the ever-evolving tech landscape.</p>
+        <img class="about-us-image" src="{% static 'images/about-us.png' %}" alt="About Us Image">
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Services That Make A Difference</h2>
+        <p>At TickleMinds, we're not just about delivering services; we're about delivering transformation. We've honed our services to ensure that we can offer the perfect solutions, tailored to your unique needs and challenges.</p>
+        <ul>
+            <li>
+                <img src="{% static 'images/service1.jpg' %}" alt="Service Image">
+                <h3>Consulting</h3>
+                <p>Our team of expert consultants analyzes your business needs and offers strategic tech guidance.</p>
+            </li>
+            <li>
+                <img src="{% static 'images/service2.jpg' %}" alt="Service Image">
+                <h3>Development</h3>
+                <p>From web to mobile, our developers craft user-friendly solutions that resonate with your target audience.</p>
+            </li>
+            <li>
+                <img src="{% static 'images/service3.jpg' %}" alt="Service Image">
+                <h3>Testing</h3>
+                <p>We ensure every product is bug-free with rigorous testing, ensuring smooth operations.</p>
+            </li>
+            <li>
+                <img src="{% static 'images/service4.jpg' %}" alt="Service Image">
+                <h3>Support</h3>
+                <p>Our round-the-clock support ensures your business never faces any hiccups.</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>Trusted by Thousands</h2>
+        <p>Our commitment to excellence has helped us earn the trust of businesses around the globe. Here's what some of them have to say:</p>
+        <div class="testimonial">
+            <p>"From the very start, TickleMinds impressed us with their dedication. They took the time to understand our challenges and provided a solution that was above and beyond."</p>
+            <span>- John Doe, ABC Corp</span>
+        </div>
+        <div class="testimonial">
+            <p>"The team at TickleMinds provided us with agile and effective solutions. Their commitment to timelines and quality is truly commendable."</p>
+            <span>- Jane Smith, XYZ Inc</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Begin Your Digital Transformation Journey</h2>
+        <p>Connect with us today and take the first step towards leveraging the power of technology to transform your business. Our team is eager to understand your challenges and assist you in your digital transformation journey.</p>
+        <a href="/contact" class="btn-contact">Contact Us</a>
+    </section>
+{% endblock %}

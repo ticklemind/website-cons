@@ -1,0 +1,15 @@
+{% block content %}
+<div class="container">
+    <h1>Schedule an Appointment</h1>
+    <p>Let's take the first step together. Schedule a meeting with our team today.</p>
+    <form method="post" action="/appointment/">
+        <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="time">Time:</label>
+    <input type="time" id="time" name="time" required>
+
+    <button type="submit" class="btn-primary">Book Now</button>
+    </form>
+</div>
+{% endblock %}
